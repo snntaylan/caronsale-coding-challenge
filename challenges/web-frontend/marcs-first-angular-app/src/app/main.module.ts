@@ -5,6 +5,9 @@ import { AppComponent } from './main.component';
 import { LoginComponent } from './login/login.component';
 import { OverviewPageComponent } from './overview-page/overview-page.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DemoMaterialModule} from '../material-module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +15,9 @@ import { OverviewPageComponent } from './overview-page/overview-page.component';
     OverviewPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    DemoMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
