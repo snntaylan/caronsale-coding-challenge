@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from './login/login.component';
-import { OverviewPageComponent } from './overview-page/overview-page.component';
 
 @Component({
   selector: 'app-root',
