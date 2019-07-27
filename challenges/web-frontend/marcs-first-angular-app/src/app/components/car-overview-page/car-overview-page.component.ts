@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarPreviewService } from '../../services/car-preview.service';
+import { CarPreviewModel } from '../../models/car-preview-model';
+
 
 @Component({
   selector: 'app-overview-page',
@@ -7,10 +9,11 @@ import { CarPreviewService } from '../../services/car-preview.service';
   styleUrls: ['./car-overview-page.component.css']
 })
 export class CarOverviewPageComponent implements OnInit {
+  constructor(private myCarPreviewService: CarPreviewService) {}
 
-  constructor() { }
+  carMockArray: Array<CarPreviewModel>;
 
   ngOnInit() {
+    this.carMockArray = this.myCarPreviewService.showFirstMockData();
   }
-
 }
